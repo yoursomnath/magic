@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sora:wght@500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+  user-select: none;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+h1{
+  padding: 0 20px 0px 20px;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+h1 span{
+  color: greenyellow;
+}
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  grid-gap: 20%;
+}
+.hilao{
+  animation: hila 0.1s linear infinite;
+}
+@keyframes hila{
+  0%{transform: translateX(0);}
+  20%{transform: translateX(-10px) rotate(-10deg);}
+  40%{transform: translateX(0px) rotate(0);}
+  60%{transform: translateX(10px) rotate(10deg);}
+  80%{transform: translateX(-10px) rotate(-10deg);}
+  100%{transform: translateX(0);}
+}
+h1{
+  text-transform: uppercase;
+  font-size: 23px;
+  color: white;
+  text-shadow: 0 0 10px #8fd79d;
+}
+.btn{
+  height: 60px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 100px white,
+              0 0 100px white,
+              0 0 30px white;
+  border: 1px solid white;
+  text-transform: uppercase;
+  justify-content: center;
+  background: white;
+  border-radius: px ;
+  color: black;
+  transition: 0.3s all;
+}
+.btn:hover{
+  box-shadow: 0 0 100px white;
+}
+@media only screen and (min-width: 800px){
+  body{
+    background-image: url("bg.jpg");
+    background-position: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+  }
+  body::after{
+    content: "Please Open On Mobile";
+    text-shadow: 0 0 50px white;
+    font-size: 30px;
+    color: white; 
+  }
+  .container{
+    display: none;
+  }
+}
